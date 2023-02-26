@@ -1,5 +1,5 @@
 <script setup>
-import { addDoc, collection } from '@firebase/firestore';
+import { addDoc, collection ,deleteDoc, doc} from '@firebase/firestore';
 import { useCollection, useFirestore } from 'vuefire'
 
 // Lee los campos de la coleccion
@@ -12,6 +12,10 @@ defineProps({
         required: true
     }
 })
+// Borrar un campo
+function borrarNota(id){
+   deleteDoc(doc(db, "Ofimatica", nombre));
+}
 
 </script>
 
@@ -19,10 +23,11 @@ defineProps({
     <h1>Programación</h1>
     <!-- Primer tr donde hace un indice de los campos-->
     <tr>
-        <th>Nombre</th>
-        <th>Horas</th>
-        <th>Imagen</th>
-        <th>Inscripcion</th>
+        <th>Nombre . </th>
+        <th>Horas . </th>
+        <th>Imagen . </th>
+        <th>Inscripcion . </th>
+        <th>Borrar . </th>
     </tr>
     <!-- Muestra los datos de cada curso -->
     <tbody v-for="curso in cursos" :key="curso.nombre">
@@ -32,6 +37,7 @@ defineProps({
             <!-- Para la imagen lo mostramso complementando la ruta con el dato puesto para cada imagen en firebase -->
             <td><img v-bind:src="'../src/images/' + curso.imagen" v-bind:alt="'' + curso.imagen" width="50"></td>
             <td><button>Incribirse</button></td>
+            <!-- <td><button @click="borrarNota(cursos.nombre)">Borrar</button></td> -->
         </tr>
     </tbody>
 </template>

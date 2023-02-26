@@ -19,10 +19,10 @@ defineProps({
     <h1>Programación</h1>
     <!-- Primer tr donde hace un indice de los campos-->
     <tr>
-        <th>Nombre</th>
-        <th>Horas</th>
-        <th>Imagen</th>
-        <th>Inscripcion</th>
+        <th>Nombre . </th>
+        <th>Horas . </th>
+        <th>Imagen . </th>
+        <th>Inscripcion . </th>
     </tr>
     <!-- Muestra los datos de cada curso -->
     <tbody v-for="curso in cursos" :key="curso.nombre">

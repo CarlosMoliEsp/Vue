@@ -18,7 +18,7 @@ onAuthStateChanged(auth, (user) => {
         <h3>Politica de Privacidad</h3>
         <a href="#">Contacto de la empresa</a>
         <!-- Enlace a mi Github -->
-        <a href="https://github.com/CarlosMoliEsp"><img class="git" src="../images/github.jpeg"></a>
+        <a href="https://github.com/CarlosMoliEsp/Vue"><img class="git" src="../images/github.jpeg"></a>
         <p>{{ nombreUsuario }}</p> <!-- Nombre del usuario conectado -->
     </footer>
 </template>
